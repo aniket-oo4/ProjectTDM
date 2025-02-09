@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "5V5i5mrgubBScuAiU+l+8ODVAeiadPLJo7XO392AelI=",
-  "Source": "ProjectTDM_Backend",
-  "BasePath": "_content/ProjectTDM_Backend",
+  "Hash": "FmJ7vZbvfguTcjdNOJKf/nuJ9/IgcvgJyo33DLPaSqw=",
+  "Source": "ProjectTDM_API",
+  "BasePath": "_content/ProjectTDM_API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

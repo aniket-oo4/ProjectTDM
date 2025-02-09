@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTDM_Backend", "ProjectTDM_Backend.csproj", "{4F21AB29-272F-45A2-99CF-FF2816793C59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTDM_API", "ProjectTDM_API.csproj", "{4F21AB29-272F-45A2-99CF-FF2816793C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.Service", "..\TDM.Service\TDM.Service.csproj", "{63069EBA-2D95-4EE5-BCC4-D879E3481723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.Data", "..\TDM.Data\TDM.Data.csproj", "{49AFBC86-D012-4E5A-87C6-6FFAFE16C99D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4F21AB29-272F-45A2-99CF-FF2816793C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F21AB29-272F-45A2-99CF-FF2816793C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F21AB29-272F-45A2-99CF-FF2816793C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63069EBA-2D95-4EE5-BCC4-D879E3481723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63069EBA-2D95-4EE5-BCC4-D879E3481723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63069EBA-2D95-4EE5-BCC4-D879E3481723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63069EBA-2D95-4EE5-BCC4-D879E3481723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49AFBC86-D012-4E5A-87C6-6FFAFE16C99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49AFBC86-D012-4E5A-87C6-6FFAFE16C99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49AFBC86-D012-4E5A-87C6-6FFAFE16C99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49AFBC86-D012-4E5A-87C6-6FFAFE16C99D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\bin\Debug\net8.0\TDM.Data.deps.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\bin\Debug\net8.0\TDM.Data.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\bin\Debug\net8.0\TDM.Data.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.AssemblyInfoInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.AssemblyInfo.cs
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.csproj.CoreCompileInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.sourcelink.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\refint\TDM.Data.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\ref\TDM.Data.dll
