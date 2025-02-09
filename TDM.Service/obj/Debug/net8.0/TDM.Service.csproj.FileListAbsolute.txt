@@ -1,0 +1,16 @@
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\bin\Debug\net8.0\TDM.Service.deps.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\bin\Debug\net8.0\TDM.Service.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\bin\Debug\net8.0\TDM.Service.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\bin\Debug\net8.0\TDM.Data.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\bin\Debug\net8.0\TDM.Data.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.csproj.AssemblyReference.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.AssemblyInfoInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.AssemblyInfo.cs
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.csproj.CoreCompileInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.sourcelink.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Serv.76CE84CE.Up2Date
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\refint\TDM.Service.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\TDM.Service.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\obj\Debug\net8.0\ref\TDM.Service.dll
