@@ -15,7 +15,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TDM.Service.DTOs.TaskDTO",
+        "Type": "TDM.Service.DTOs.TaskDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectTDM_API.Controllers.UserRolesControllers.UserRolesController",
+    "Method": "GetRoleById",
+    "RelativePath": "UserRoles/api/GetRoleByUserId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TDM.Service.DTOs.RoleDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

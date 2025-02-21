@@ -15,7 +15,7 @@ namespace ProjectTDM_API.Controllers.TaskControllers
 
         [HttpGet]
         [Route("api/GetTaskById/{id}")]
-        public async Task<ActionResult<TaskDTO>> GetTaskById([FromRoute]string id)
+        public async Task<ActionResult<TaskDto>> GetTaskById([FromRoute]string id)
         {
             return _taskManager.GetTaskById(id);
             return View();

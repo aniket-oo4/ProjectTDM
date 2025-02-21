@@ -17,3 +17,5 @@ namespace TDM.Data.Entities
         public int UpdatedBy { get; set; }
 
     }
+
+}

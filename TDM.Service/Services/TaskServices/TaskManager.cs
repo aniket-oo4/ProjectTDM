@@ -16,7 +16,7 @@ namespace TDM.Service.Services.TaskServices
         {
         }
 
-        public List<TaskDTO> GetAllTasks()
+        public List<TaskDto> GetAllTasks()
         {
             try
             {
@@ -29,12 +29,12 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public TaskDTO GetTaskById(string id)
+        public TaskDto GetTaskById(string id)
         {
             try
             {
 
-                return new TaskDTO()
+                return new TaskDto()
                 {
                     Id = 1,
                     Name = "Sample Task",
@@ -71,7 +71,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public List<TaskDTO> GetTasksByCategoryId(string categoryId)
+        public List<TaskDto> GetTasksByCategoryId(string categoryId)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public List<TaskDTO> GetTasksByPriorityId(string priorityId)
+        public List<TaskDto> GetTasksByPriorityId(string priorityId)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public List<TaskDTO> GetTasksByProjectId(string projectId)
+        public List<TaskDto> GetTasksByProjectId(string projectId)
         {
             try
             {
@@ -110,7 +110,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public List<TaskDTO> GetTasksByStatusId(string statusId)
+        public List<TaskDto> GetTasksByStatusId(string statusId)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public List<TaskDTO> GetTasksByUserId(string userId)
+        public List<TaskDto> GetTasksByUserId(string userId)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace TDM.Service.Services.TaskServices
                 throw;
             }
         }
-        public TaskDTO CreateTask(TaskDTO task)
+        public TaskDto CreateTask(TaskDto task)
         {
             try
             {
@@ -148,7 +148,7 @@ namespace TDM.Service.Services.TaskServices
                 throw ex;
             }
         }
-        public TaskDTO DeleteTask(string id)
+        public TaskDto DeleteTask(string id)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace TDM.Service.Services.TaskServices
             }
         }
        
-        public TaskDTO UpdateTask(TaskDTO task)
+        public TaskDto UpdateTask(TaskDto task)
         {
             try
             {

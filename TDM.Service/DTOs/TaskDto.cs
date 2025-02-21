@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TDM.Service.DTOs
 {
-    public class TaskDTO
+    public class TaskDto
     {
         [JsonPropertyName("Id")]
         public int Id { get; set; }

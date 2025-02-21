@@ -4,6 +4,6 @@ namespace TDM.Service.Interfaces.TaskInterfaces
 {
     internal interface ICreateTask
     {
-        public TaskDTO CreateTask(TaskDTO task);
+        public TaskDto CreateTask(TaskDto task);
     }
 }

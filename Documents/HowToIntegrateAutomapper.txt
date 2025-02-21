@@ -1,0 +1,50 @@
+step 1 --> install AutoMapper from nugetpackagemanger for all project or for service and APi layer
+step 2 --> Create Class such as 
+  -->  MappingProfile  (it is used while registering mapper with our APi application in Program.cs file )
+
+using AutoMapper;
+using TDM.Data.Entities;
+using TDM.Service.DTOs;
+
+public class MappingProfile : Profile
+{
+    public MappingProfile()
+    {
+
+        CreateMap<Role, RoleDto>();
+        CreateMap<RoleDto, Role>();
+
+        CreateMap<UserTask, TaskDto>();
+        CreateMap<TaskDto, UserTask>();
+    }
+}
+
+step 3 --->
+	in program.cs file 
+	do following after builder creation 
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Register AutoMapper
+            builder.Services.AddAutoMapper(typeof(MappingProfile)); // Register AutoMapper using Program type
+
+            // Register your services  // add services here where you want to use mapper 
+            builder.Services.AddTransient<RoleManager>();    // Register RoleService
+            builder.Services.AddTransient<TaskManager>(); // Register UserTaskService
+
+
+step 4 --> inManager class  
+   i: Initialize the instace of Mapper such as  
+    public class RoleManager
+    {
+        private readonly IMapper _mapper;
+
+        public RoleManager(IMapper mapper) //(it will take proper instance from program.cs cause we added there mapping profile )
+        {
+            _mapper = mapper;
+        }
+
+step 5 : use it  as 
+
+
+		return _mapper.Map<RoleDto>(role); // it will accepts the object of Entity and returns RoleDto object if you want viceversa 
+		return _mapper.Map<Role>(roleDto); //retunr Role 

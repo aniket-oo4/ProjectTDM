@@ -4,6 +4,6 @@ namespace TDM.Service.Interfaces.TaskInterfaces
 {
     internal interface IDeleteTask
     {
-        public TaskDTO DeleteTask(string id);
+        public TaskDto DeleteTask(string id);
     }
 }
