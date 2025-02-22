@@ -9,8 +9,8 @@ namespace ProjectTDM_API.Controllers.TaskControllers
     public class TaskController : Controller
     {
         private readonly TaskManager _taskManager;
-        public TaskController() {
-            _taskManager = new TaskManager();
+        public TaskController(TaskManager taskService) {
+            _taskManager = taskService;
         }
 
         [HttpGet]

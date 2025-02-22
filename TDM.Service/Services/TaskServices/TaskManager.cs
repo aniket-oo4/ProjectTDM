@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TDM.Data.DataManagers;
+using TDM.Data.Entities;
 using TDM.Service.DTOs;
 using TDM.Service.Interfaces.TaskInterfaces;
 
@@ -12,8 +15,13 @@ namespace TDM.Service.Services.TaskServices
 
     public class TaskManager : IGetTask,IUpdateTask,ICreateTask,IDeleteTask
     {
-        public TaskManager()
+        private readonly TaskDataManager _taskDataManager;
+        private readonly IMapper _mapper;
+
+        public TaskManager(IMapper mapper)
         {
+            _taskDataManager=new TaskDataManager();
+            _mapper = mapper;
         }
 
         public List<TaskDto> GetAllTasks()
@@ -34,32 +42,34 @@ namespace TDM.Service.Services.TaskServices
             try
             {
 
-                return new TaskDto()
-                {
-                    Id = 1,
-                    Name = "Sample Task",
-                    Description = "This is a sample task description.",
-                    StatusId = "1",
-                    AssignedBy = "1",
-                    AssignedOn = DateTime.Now,
-                    DueDate = DateTime.Now.AddDays(7),
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddDays(7),
-                    CreatedBy = 1,
-                    CreatedOn = DateTime.Now,
-                    UpdatedBy = 1,
-                    UpdatedOn = DateTime.Now,
-                    PriorityId = 1,
-                    CategoryId = 1,
-                    ProjectId = 1,
-                    UserId = 1,
-                    TotalTimeSpent = "5h",
-                    UDF1 = "UDF1",
-                    UDF2 = "UDF2",
-                    UDF3 = "UDF3",
-                    UDF4 = "UDF4",
-                    UDF5 = "UDF5"
-                };
+                UserTask taskEntity=_taskDataManager.LoadTask(Convert.ToInt32(id));
+                return _mapper.Map<TaskDto>(taskEntity);
+                //return new TaskDto()
+                //{
+                //    Id = 1,
+                //    Name = "Sample Task",
+                //    Description = "This is a sample task description.",
+                //    StatusId = "1",
+                //    AssignedBy = "1",
+                //    AssignedOn = DateTime.Now,
+                //    DueDate = DateTime.Now.AddDays(7),
+                //    StartDate = DateTime.Now,
+                //    EndDate = DateTime.Now.AddDays(7),
+                //    CreatedBy = 1,
+                //    CreatedOn = DateTime.Now,
+                //    UpdatedBy = 1,
+                //    UpdatedOn = DateTime.Now,
+                //    PriorityId = 1,
+                //    CategoryId = 1,
+                //    ProjectId = 1,
+                //    UserId = 1,
+                //    TotalTimeSpent = "5h",
+                //    UDF1 = "UDF1",
+                //    UDF2 = "UDF2",
+                //    UDF3 = "UDF3",
+                //    UDF4 = "UDF4",
+                //    UDF5 = "UDF5"
+                //};
 
 
                 throw new NotImplementedException();
