@@ -9,47 +9,65 @@ using System.Transactions;
 using TDM.Data.Entities;
 namespace TDM.Data.DataManagers
 {
-    internal class TaskDataManager
+    public class TaskDataManager
     {
-        private string _connectionString;
+        private string _connectionString= @"Data Source=LAPTOP-4KELL3LU\SQLEXPRESS;Initial Catalog=TaskDetailsManager;Integrated Security=True;TrustServerCertificate=True;";
 
         public UserTask LoadTask(int taskId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+
+            using (var transaction = new TransactionScope())
             {
-                connection.Open();
-                //var query = "SELECT * FROM Tasks WHERE Id = @TaskId";
-                var query = "SELECT Id, Name, Description, StatusId, AssignedBy, AssignedOn, DueDate, StartDate, EndDate, CreatedBy, CreatedOn, UpdatedBy, UpdatedOn, PriorityId, CategoryId, ProjectId, UserId, TotalTimeSpent, UDF1, UDF2, UDF3, UDF4, UDF5 FROM Tasks WHERE Id = @TaskId";
-                using (var command = new SqlCommand(query, connection))
+                    
+                try 
+                { 
+                     using (var connection = new SqlConnection(_connectionString))
+                     {
+                         connection.Open();
+                         //var query = "SELECT * FROM Tasks WHERE Id = @TaskId";
+                         var query = "SELECT Id, Name, Description, StatusId, AssignedBy, AssignedOn, DueDate, StartDate, EndDate, CreatedBy, CreatedOn, UpdatedBy, UpdatedOn, PriorityId, CategoryId, ProjectId, UserId, TotalTimeSpent, UDF1, UDF2, UDF3, UDF4, UDF5 FROM Tasks WHERE Id = @TaskId";
+                         using (var command = new SqlCommand(query, connection))
+                         {
+                             command.Parameters.AddWithValue("@TaskId", taskId);
+                             using (var adapter = new SqlDataAdapter(command))
+                             {
+                                 DataTable dt = new DataTable();
+                                 adapter.Fill(dt);
+                                 if (dt.Rows.Count > 0)
+                                 {
+                                    transaction.Complete();
+                                    return InitializeObject<UserTask>(dt);
+                                 }
+                             }
+                         }
+                     }
+                     return null;
+                }
+                catch (Exception ex)
                 {
-                    command.Parameters.AddWithValue("@TaskId", taskId);
-                    using (var adapter = new SqlDataAdapter(command))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        if (dt.Rows.Count > 0)
-                        {
-                            return InitializeObject<UserTask>(dt);
-                        }
-                    }
+                    return null;
                 }
             }
-            return null;
         }
 
         private T InitializeObject<T>(DataTable dt) where T : new()
         {
             T obj = new T();
             var properties = typeof(T).GetProperties();
+
             foreach (var property in properties)
             {
                 if (dt.Columns.Contains(property.Name) && dt.Rows[0][property.Name] != DBNull.Value)
                 {
-                    property.SetValue(obj, Convert.ChangeType(dt.Rows[0][property.Name], property.PropertyType));
+                    Type propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                    object value = Convert.ChangeType(dt.Rows[0][property.Name], propertyType);
+                    property.SetValue(obj, value);
                 }
             }
+
             return obj;
         }
+
 
         public bool InsertTask(UserTask task)
         {

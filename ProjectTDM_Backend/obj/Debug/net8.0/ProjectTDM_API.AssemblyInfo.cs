@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectTDM_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a7d4a65e6f4e1e00e835cf247eed08d43005c8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0579dd1c74eaa7b9d84ac9ef85de19f552eb2c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectTDM_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectTDM_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

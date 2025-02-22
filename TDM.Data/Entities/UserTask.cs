@@ -15,8 +15,8 @@ namespace TDM.Data.Entities
         public string? AssignedBy { get; set; }
         public DateTime? AssignedOn { get; set; }
         public DateTime? DueDate { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public int? UpdatedBy { get; set; }
