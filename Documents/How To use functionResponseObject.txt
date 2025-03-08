@@ -1,0 +1,123 @@
+using System.Net;
+
+public class FunctionResponse<T>
+{
+    public FunctionResponse()
+    {
+        ErrorList = new List<string>();
+        Warnings = new List<string>(); 
+    }
+
+    // Status indicators
+    public bool IsSuccess { get; set; }
+    public HttpStatusCode HttpStatusCode { get; set; }
+    public string Message { get; set; } // Informative messages (e.g., "Operation completed")
+
+    // Data handling
+    public T Data { get; set; } // Main result data
+    public object AdditionalData { get; set; } // For auxiliary or related data
+    public T GenericObject { get; set; } // Retained for flexibility
+
+    // Error and warning handling
+    public List<string> ErrorList { get; set; } // List of error messages
+    public List<string> Warnings { get; set; } // List of warnings (non-critical)
+
+    // Metadata
+    public int ResultCount { get; set; } // Number of items in the current result
+    public int TotalRecords { get; set; } // Total records for pagination scenarios
+    public string CorrelationId { get; set; } // For tracing requests in distributed systems
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow; // Operation timestamp
+
+    // Performance metrics
+    public double ExecutionTimeInSeconds { get; set; } // Time taken for execution
+
+    // Debugging information
+    public string DebugInfo { get; set; } // Additional information for debugging (if needed)
+}
+
+ Example 
+ 
+ [HttpGet]
+[Route("api/GetData")]
+public IActionResult GetData(int id)
+{
+    try
+    {
+        // Example: Check if the user is authenticated
+        if (!User.Identity.IsAuthenticated)
+        {
+            return Unauthorized(new FunctionResponse<string>
+            {
+                IsSuccess = false,
+                HttpStatusCode = HttpStatusCode.Unauthorized,
+                Message = "You are not authorized to access this resource."
+            });
+        }
+
+        // Simulate a database fetch
+        var data = FetchDataById(id);
+
+        // Example: If data is not found
+        if (data == null)
+        {
+            return NotFound(new FunctionResponse<string>
+            {
+                IsSuccess = false,
+                HttpStatusCode = HttpStatusCode.NotFound,
+                Message = "The requested resource could not be found."
+            });
+        }
+
+        // If everything is successful
+        return Ok(new FunctionResponse<object>
+        {
+            IsSuccess = true,
+            HttpStatusCode = HttpStatusCode.OK,
+            Message = "Data retrieved successfully.",
+            Data = data
+        });
+    }
+    catch (Exception ex)
+    {
+        // Example: Handling unexpected errors
+        return StatusCode(StatusCodes.Status500InternalServerError, new FunctionResponse<string>
+        {
+            IsSuccess = false,
+            HttpStatusCode = HttpStatusCode.InternalServerError,
+            Message = "An unexpected error occurred.",
+            DebugInfo = ex.Message
+        });
+    }
+}
+
+
+different return message method 
+Explanation of HTTP Status Code Returns:
+Ok() (200): Use when the request is successfully processed.
+
+csharp
+return Ok(responseObject);
+NotFound() (404): Use when the requested resource is not found.
+
+csharp
+return NotFound(responseObject);
+Unauthorized() (401): Use when the user is not authenticated or authorized.
+
+csharp
+return Unauthorized(responseObject);
+StatusCode() (500, etc.): Use for custom status codes, like 500 for internal server errors.
+
+csharp
+return StatusCode(StatusCodes.Status500InternalServerError, responseObject);
+BadRequest() (400): Use when the request is invalid (e.g., missing or invalid input).
+
+csharp
+return BadRequest(responseObject);
+Summary Table of Common Status Codes:
+Status Code	Helper Method	Description
+200 OK	Ok()	Request processed successfully
+400 Bad Request	BadRequest()	Invalid request parameters
+401 Unauthorized	Unauthorized()	Authentication required
+403 Forbidden	Forbid()	Authenticated but no permission
+404 Not Found	NotFound()	Resource not found
+500 Internal Server Error	StatusCode()	Unexpected errors with StatusCodes.Status500InternalServerError

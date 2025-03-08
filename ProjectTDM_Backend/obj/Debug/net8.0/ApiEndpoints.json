@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "ProjectTDM_API.Controllers.AuthControllers.AuthController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Auth/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "TDM.Service.CustomDTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectTDM_API.Controllers.UserControllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/GetUserByUserId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TDM.Service.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ProjectTDM_API.Controllers.TaskControllers.TaskController",
     "Method": "GetTaskById",
     "RelativePath": "Task/api/GetTaskById/{id}",

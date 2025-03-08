@@ -11,3 +11,6 @@ D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\refint\TDM.Data.dll
 D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.pdb
 D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\ref\TDM.Data.dll
 D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.csproj.AssemblyReference.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\bin\Debug\net8.0\TDM.Infrastructure.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\bin\Debug\net8.0\TDM.Infrastructure.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Data\obj\Debug\net8.0\TDM.Data.csproj.Up2Date

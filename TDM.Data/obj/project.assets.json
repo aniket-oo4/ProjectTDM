@@ -833,6 +833,19 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "TDM.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.2"
+        },
+        "compile": {
+          "bin/placeholder/TDM.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TDM.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2110,13 +2123,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TDM.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TDM.Infrastructure/TDM.Infrastructure.csproj",
+      "msbuildProject": "../TDM.Infrastructure/TDM.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 14.0.0",
       "Microsoft.Data.SqlClient >= 6.0.1",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.2"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.2",
+      "TDM.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2150,7 +2169,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Infrastructure\\TDM.Infrastructure.csproj": {
+              "projectPath": "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Infrastructure\\TDM.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

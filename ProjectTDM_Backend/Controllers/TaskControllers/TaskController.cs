@@ -18,7 +18,6 @@ namespace ProjectTDM_API.Controllers.TaskControllers
         public async Task<ActionResult<TaskDto>> GetTaskById([FromRoute]string id)
         {
             return _taskManager.GetTaskById(id);
-            return View();
         }
 
     }

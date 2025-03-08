@@ -8,17 +8,17 @@ namespace ProjectTDM_API.Controllers.UserRolesControllers
     [Route("[controller]")]
     public class UserRolesController : Controller
     {
-        private readonly RoleManager _roleService;
+        private readonly RoleManager _roleManager;
 
         public UserRolesController(RoleManager roleService)
         {
-            _roleService = roleService;
+            _roleManager = roleService;
         }
         [HttpGet]
         [Route("api/GetRoleByUserId/{userId}")]
         public ActionResult <RoleDto> GetRoleById([FromRoute]int userId)
         {
-            var roleDto = _roleService.GetRoleDto(userId);
+            var roleDto = _roleManager.GetRoleDto(userId);
             return roleDto;
         }
 

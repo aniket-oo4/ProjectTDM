@@ -937,7 +937,8 @@
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Microsoft.Data.SqlClient": "6.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2",
+          "TDM.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TDM.Data.dll": {}
@@ -946,12 +947,26 @@
           "bin/placeholder/TDM.Data.dll": {}
         }
       },
+      "TDM.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.2"
+        },
+        "compile": {
+          "bin/placeholder/TDM.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TDM.Infrastructure.dll": {}
+        }
+      },
       "TDM.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "TDM.Data": "1.0.0"
+          "TDM.Data": "1.0.0",
+          "TDM.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TDM.Service.dll": {}
@@ -2654,6 +2669,11 @@
       "path": "../TDM.Data/TDM.Data.csproj",
       "msbuildProject": "../TDM.Data/TDM.Data.csproj"
     },
+    "TDM.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TDM.Infrastructure/TDM.Infrastructure.csproj",
+      "msbuildProject": "../TDM.Infrastructure/TDM.Infrastructure.csproj"
+    },
     "TDM.Service/1.0.0": {
       "type": "project",
       "path": "../TDM.Service/TDM.Service.csproj",
@@ -2665,6 +2685,7 @@
       "AutoMapper >= 14.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.1",
       "Swashbuckle.AspNetCore >= 7.2.0",
+      "TDM.Infrastructure >= 1.0.0",
       "TDM.Service >= 1.0.0"
     ]
   },
@@ -2700,6 +2721,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Infrastructure\\TDM.Infrastructure.csproj": {
+              "projectPath": "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Infrastructure\\TDM.Infrastructure.csproj"
+            },
             "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Service\\TDM.Service.csproj": {
               "projectPath": "D:\\aniket-2\\ProjectTDM\\ProjectTDM\\TDM.Service\\TDM.Service.csproj"
             }

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TDM.Infrastructure\TDM.Infrastructure.csproj" />
     <ProjectReference Include="..\TDM.Service\TDM.Service.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,13 @@
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\bin\Debug\net8.0\TDM.Infrastructure.deps.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\bin\Debug\net8.0\TDM.Infrastructure.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\bin\Debug\net8.0\TDM.Infrastructure.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.csproj.AssemblyReference.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.AssemblyInfoInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.AssemblyInfo.cs
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.csproj.CoreCompileInputs.cache
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.sourcelink.json
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\refint\TDM.Infrastructure.dll
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\TDM.Infrastructure.pdb
+D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Infrastructure\obj\Debug\net8.0\ref\TDM.Infrastructure.dll

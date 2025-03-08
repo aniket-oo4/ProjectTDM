@@ -8,16 +8,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TDM.Data\TDM.Data.csproj" />
+    <ProjectReference Include="..\TDM.Infrastructure\TDM.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Logger.Service\" />
     <Folder Include="VersionManager\" />
-    <Folder Include="Security\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="14.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\Security\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\aniket-2\ProjectTDM\ProjectTDM\TDM.Service\Security\.editorconfig" />
   </ItemGroup>
 
 </Project>
