@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET Framework
-      run: choco install visualstudio2019community --params "--add Microsoft.VisualStudio.Workload.WebBuildTools"
+      run: choco install visualstudio2022community --params "--add Microsoft.VisualStudio.Workload.WebBuildTools"
     - name: Restore dependencies
       run: nuget restore ProjectTDM_Backend.sln
     - name: Build
